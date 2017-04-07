@@ -13,6 +13,14 @@
 		2A1D35D31E97D2AC00AAAEE4 /* DesignableViews.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D35CB1E97D2AC00AAAEE4 /* DesignableViews.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A1D35D81E97D2BA00AAAEE4 /* BasicLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E8421E97D0FB00096544 /* BasicLabel.swift */; };
 		2A1D35D91E97D2BD00AAAEE4 /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D35C11E97D14200AAAEE4 /* BasicButton.swift */; };
+		2A1D38291E97DA4400AAAEE4 /* Mada-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38211E97DA4400AAAEE4 /* Mada-Black.otf */; };
+		2A1D382A1E97DA4400AAAEE4 /* Mada-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38221E97DA4400AAAEE4 /* Mada-Bold.otf */; };
+		2A1D382B1E97DA4400AAAEE4 /* Mada-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38231E97DA4400AAAEE4 /* Mada-ExtraLight.otf */; };
+		2A1D382C1E97DA4400AAAEE4 /* Mada-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38241E97DA4400AAAEE4 /* Mada-Light.otf */; };
+		2A1D382D1E97DA4400AAAEE4 /* Mada-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38251E97DA4400AAAEE4 /* Mada-Medium.otf */; };
+		2A1D382E1E97DA4400AAAEE4 /* Mada-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38261E97DA4400AAAEE4 /* Mada-Regular.otf */; };
+		2A1D382F1E97DA4400AAAEE4 /* Mada-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38271E97DA4400AAAEE4 /* Mada-SemiBold.otf */; };
+		2A1D38301E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38281E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf */; };
 		2A58D6461E97CF6B00E2084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58D6451E97CF6B00E2084D /* AppDelegate.swift */; };
 		2A58D64B1E97CF6B00E2084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A58D6491E97CF6B00E2084D /* Main.storyboard */; };
 		2A58D64D1E97CF6B00E2084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A58D64C1E97CF6B00E2084D /* Assets.xcassets */; };
@@ -49,6 +57,14 @@
 		2A1D35CB1E97D2AC00AAAEE4 /* DesignableViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignableViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1D35CD1E97D2AC00AAAEE4 /* DesignableViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesignableViews.h; sourceTree = "<group>"; };
 		2A1D35CE1E97D2AC00AAAEE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A1D38211E97DA4400AAAEE4 /* Mada-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-Black.otf"; sourceTree = "<group>"; };
+		2A1D38221E97DA4400AAAEE4 /* Mada-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-Bold.otf"; sourceTree = "<group>"; };
+		2A1D38231E97DA4400AAAEE4 /* Mada-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-ExtraLight.otf"; sourceTree = "<group>"; };
+		2A1D38241E97DA4400AAAEE4 /* Mada-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-Light.otf"; sourceTree = "<group>"; };
+		2A1D38251E97DA4400AAAEE4 /* Mada-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-Medium.otf"; sourceTree = "<group>"; };
+		2A1D38261E97DA4400AAAEE4 /* Mada-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-Regular.otf"; sourceTree = "<group>"; };
+		2A1D38271E97DA4400AAAEE4 /* Mada-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-SemiBold.otf"; sourceTree = "<group>"; };
+		2A1D38281E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SignPainter-HouseScript.ttf"; sourceTree = "<group>"; };
 		2A58D6421E97CF6B00E2084D /* ExperimentalSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A58D6451E97CF6B00E2084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A58D64A1E97CF6B00E2084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +111,21 @@
 			path = DesignableViews;
 			sourceTree = "<group>";
 		};
+		2A1D38201E97DA3000AAAEE4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D38211E97DA4400AAAEE4 /* Mada-Black.otf */,
+				2A1D38221E97DA4400AAAEE4 /* Mada-Bold.otf */,
+				2A1D38231E97DA4400AAAEE4 /* Mada-ExtraLight.otf */,
+				2A1D38241E97DA4400AAAEE4 /* Mada-Light.otf */,
+				2A1D38251E97DA4400AAAEE4 /* Mada-Medium.otf */,
+				2A1D38261E97DA4400AAAEE4 /* Mada-Regular.otf */,
+				2A1D38271E97DA4400AAAEE4 /* Mada-SemiBold.otf */,
+				2A1D38281E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		2A58D6391E97CF6B00E2084D = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +157,7 @@
 		2A61E83E1E97D09700096544 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2A1D38201E97DA3000AAAEE4 /* Fonts */,
 				2A58D64E1E97CF6B00E2084D /* LaunchScreen.storyboard */,
 				2A58D6511E97CF6B00E2084D /* Info.plist */,
 				2A58D64C1E97CF6B00E2084D /* Assets.xcassets */,
@@ -256,7 +288,15 @@
 			files = (
 				2A58D6501E97CF6B00E2084D /* LaunchScreen.storyboard in Resources */,
 				2A58D64D1E97CF6B00E2084D /* Assets.xcassets in Resources */,
+				2A1D382B1E97DA4400AAAEE4 /* Mada-ExtraLight.otf in Resources */,
+				2A1D38301E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf in Resources */,
+				2A1D382F1E97DA4400AAAEE4 /* Mada-SemiBold.otf in Resources */,
+				2A1D38291E97DA4400AAAEE4 /* Mada-Black.otf in Resources */,
 				2A58D64B1E97CF6B00E2084D /* Main.storyboard in Resources */,
+				2A1D382E1E97DA4400AAAEE4 /* Mada-Regular.otf in Resources */,
+				2A1D382A1E97DA4400AAAEE4 /* Mada-Bold.otf in Resources */,
+				2A1D382C1E97DA4400AAAEE4 /* Mada-Light.otf in Resources */,
+				2A1D382D1E97DA4400AAAEE4 /* Mada-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

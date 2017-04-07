@@ -10,6 +10,10 @@ import UIKit
 
 @IBDesignable
 public class BasicButton: UIButton {
+    
+    // MARK: Properties
+    
+    private let defaultHeight: CGFloat = 44
 
     // MARK: Lifecycle
     
@@ -36,5 +40,6 @@ public class BasicButton: UIButton {
     private func configureButton() {
         backgroundColor = UIColor.blue
         setTitleColor(UIColor.white, for: .normal)
+        heightAnchor.constraint(equalToConstant: defaultHeight).isActive = true
     }
 }
