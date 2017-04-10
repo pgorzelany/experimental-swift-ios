@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-xb-so5">
-                                        <rect key="frame" x="16" y="16" width="288" height="320"/>
+                                        <rect key="frame" x="16" y="16" width="288" height="380"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-WF-U7M">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
@@ -33,15 +33,28 @@
                                                     <constraint firstAttribute="height" constant="200" id="o4R-JC-2LO"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsk-6l-9nL" customClass="BasicButton" customModule="DesignableViews">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyU-iR-y5N" customClass="BasicButton" customModule="DesignableViews">
                                                 <rect key="frame" x="0.0" y="216" width="288" height="44"/>
+                                                <color key="backgroundColor" cyan="0.13789999999999999" magenta="1" yellow="0.26000000000000001" black="0.040000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                <state key="normal" title="Configure App"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                        <color key="value" cyan="0.0" magenta="1" yellow="0.60999999999999999" black="0.17000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="xPy-5L-D0M" kind="show" id="EGP-QO-sVS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsk-6l-9nL" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="276" width="288" height="44"/>
                                                 <state key="normal" title="Led Blink"/>
                                                 <connections>
                                                     <segue destination="dBi-5B-inw" kind="show" id="Jc5-kC-ULx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BZ-8L-ueE" customClass="BasicButton" customModule="DesignableViews">
-                                                <rect key="frame" x="0.0" y="276" width="288" height="44"/>
+                                                <rect key="frame" x="0.0" y="336" width="288" height="44"/>
                                                 <state key="normal" title="Led Intensity"/>
                                                 <connections>
                                                     <segue destination="QEv-Hz-mF3" kind="show" id="6ps-0w-Jcx"/>
@@ -130,6 +143,89 @@
             </objects>
             <point key="canvasLocation" x="2323.125" y="35.91549295774648"/>
         </scene>
+        <!--Configuration-->
+        <scene sceneID="bn3-qk-Byg">
+            <objects>
+                <viewController storyboardIdentifier="ConfigurationViewController" id="xPy-5L-D0M" customClass="ConfigurationViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j4y-3w-BbF"/>
+                        <viewControllerLayoutGuide type="bottom" id="qjK-V3-TeY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LbO-Bj-uky">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyx-X6-Q6s">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-NL-kXx">
+                                        <rect key="frame" x="16" y="16" width="288" height="320"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="configuration-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="oLW-DJ-f8v">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="qfZ-Qw-frP"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RaspberryPi IP Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dnM-kB-bQG">
+                                                <rect key="frame" x="0.0" y="216" width="288" height="44"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYD-aU-7Vo" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="276" width="288" height="44"/>
+                                                <state key="normal" title="Test Connection"/>
+                                                <connections>
+                                                    <action selector="testConnectionButtonTouched:" destination="xPy-5L-D0M" eventType="touchUpInside" id="Sb6-hc-9sh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dnM-kB-bQG" firstAttribute="height" secondItem="xYD-aU-7Vo" secondAttribute="height" id="NHJ-i1-BfP"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Vc2-NL-kXx" firstAttribute="leading" secondItem="jyx-X6-Q6s" secondAttribute="leading" constant="16" id="PPx-Jn-P31"/>
+                                    <constraint firstItem="Vc2-NL-kXx" firstAttribute="top" secondItem="jyx-X6-Q6s" secondAttribute="top" constant="16" id="QHY-tB-RPR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vc2-NL-kXx" secondAttribute="trailing" constant="16" id="V6Z-WW-Alh"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xug-ey-LRh" appends="YES" id="9cc-gX-yaA"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jyx-X6-Q6s" firstAttribute="leading" secondItem="LbO-Bj-uky" secondAttribute="leading" id="LSX-iE-kZL"/>
+                            <constraint firstItem="jyx-X6-Q6s" firstAttribute="top" secondItem="j4y-3w-BbF" secondAttribute="bottom" id="PBP-On-5e5"/>
+                            <constraint firstItem="qjK-V3-TeY" firstAttribute="top" secondItem="jyx-X6-Q6s" secondAttribute="bottom" id="kkn-DY-e5Z"/>
+                            <constraint firstAttribute="trailing" secondItem="jyx-X6-Q6s" secondAttribute="trailing" id="y9l-ZD-wbs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Configuration" id="xAj-ou-MN0">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="AWO-jt-asj">
+                            <connections>
+                                <action selector="saveButtonTouched:" destination="xPy-5L-D0M" id="PeU-fi-xzs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="raspberryAddressTextField" destination="dnM-kB-bQG" id="TtM-9p-FUI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nl3-6R-cCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xug-ey-LRh">
+                    <connections>
+                        <action selector="tapGestureRecognized:" destination="xPy-5L-D0M" id="PQ4-Yv-xrC"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1668.75" y="-626.4084507042254"/>
+        </scene>
         <!--Led Blink-->
         <scene sceneID="y35-O1-kba">
             <objects>
@@ -215,6 +311,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="configuration-placeholder" width="256" height="256"/>
         <image name="led-placeholder" width="300" height="250"/>
         <image name="raspberry-placeholder" width="350" height="236"/>
     </resources>

@@ -37,4 +37,8 @@ class RaspberryApi {
         }
         return URL(string: "\(settings.backendUrl)/\(endpoint)")!
     }
+    
+    // MARK: Public methods
+    
+    
 }
