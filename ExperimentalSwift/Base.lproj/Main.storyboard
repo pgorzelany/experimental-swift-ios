@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Choose a demo-->
+        <!--Table Of Contents-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TableOfContentsViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                             <constraint firstAttribute="trailing" secondItem="a3k-Ju-xDS" secondAttribute="trailing" id="yn2-5D-2Ji"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose a demo" id="jZ4-9X-m0c"/>
+                    <navigationItem key="navigationItem" title="Table Of Contents" id="jZ4-9X-m0c"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,7 +200,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="frq-1v-zqa" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPt-zI-KR9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPt-zI-KR9" customClass="BasicNavigationBar" customModule="ExperimentalSwift" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
