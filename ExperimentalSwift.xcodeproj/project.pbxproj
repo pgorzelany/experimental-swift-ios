@@ -20,11 +20,14 @@
 		2A1D382D1E97DA4400AAAEE4 /* Mada-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38251E97DA4400AAAEE4 /* Mada-Medium.otf */; };
 		2A1D382E1E97DA4400AAAEE4 /* Mada-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38261E97DA4400AAAEE4 /* Mada-Regular.otf */; };
 		2A1D382F1E97DA4400AAAEE4 /* Mada-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38271E97DA4400AAAEE4 /* Mada-SemiBold.otf */; };
-		2A1D38301E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D38281E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf */; };
 		2A58D6461E97CF6B00E2084D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58D6451E97CF6B00E2084D /* AppDelegate.swift */; };
 		2A58D64B1E97CF6B00E2084D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A58D6491E97CF6B00E2084D /* Main.storyboard */; };
 		2A58D64D1E97CF6B00E2084D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A58D64C1E97CF6B00E2084D /* Assets.xcassets */; };
 		2A58D6501E97CF6B00E2084D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A58D64E1E97CF6B00E2084D /* LaunchScreen.storyboard */; };
+		2A86B2981E9BAF310018529F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2971E9BAF310018529F /* UIFont+Extensions.swift */; };
+		2A86B2991E9BAF630018529F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2971E9BAF310018529F /* UIFont+Extensions.swift */; };
+		2A86B29B1E9BAFF50018529F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */; };
+		2A86B29C1E9BAFFB0018529F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,6 @@
 		2A1D38251E97DA4400AAAEE4 /* Mada-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-Medium.otf"; sourceTree = "<group>"; };
 		2A1D38261E97DA4400AAAEE4 /* Mada-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-Regular.otf"; sourceTree = "<group>"; };
 		2A1D38271E97DA4400AAAEE4 /* Mada-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mada-SemiBold.otf"; sourceTree = "<group>"; };
-		2A1D38281E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SignPainter-HouseScript.ttf"; sourceTree = "<group>"; };
 		2A58D6421E97CF6B00E2084D /* ExperimentalSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExperimentalSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A58D6451E97CF6B00E2084D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A58D64A1E97CF6B00E2084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		2A58D64F1E97CF6B00E2084D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A58D6511E97CF6B00E2084D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A61E8421E97D0FB00096544 /* BasicLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicLabel.swift; sourceTree = "<group>"; };
+		2A86B2971E9BAF310018529F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +125,6 @@
 				2A1D38251E97DA4400AAAEE4 /* Mada-Medium.otf */,
 				2A1D38261E97DA4400AAAEE4 /* Mada-Regular.otf */,
 				2A1D38271E97DA4400AAAEE4 /* Mada-SemiBold.otf */,
-				2A1D38281E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			children = (
 				2A58D6451E97CF6B00E2084D /* AppDelegate.swift */,
 				2A61E83E1E97D09700096544 /* Resources */,
+				2A86B2961E9BAF1F0018529F /* Utils */,
 				2A61E83F1E97D0AD00096544 /* Modules */,
 			);
 			path = ExperimentalSwift;
@@ -182,6 +186,15 @@
 			);
 			name = Views;
 			path = ../ExperimentalSwift;
+			sourceTree = "<group>";
+		};
+		2A86B2961E9BAF1F0018529F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2A86B2971E9BAF310018529F /* UIFont+Extensions.swift */,
+				2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +302,6 @@
 				2A58D6501E97CF6B00E2084D /* LaunchScreen.storyboard in Resources */,
 				2A58D64D1E97CF6B00E2084D /* Assets.xcassets in Resources */,
 				2A1D382B1E97DA4400AAAEE4 /* Mada-ExtraLight.otf in Resources */,
-				2A1D38301E97DA4400AAAEE4 /* SignPainter-HouseScript.ttf in Resources */,
 				2A1D382F1E97DA4400AAAEE4 /* Mada-SemiBold.otf in Resources */,
 				2A1D38291E97DA4400AAAEE4 /* Mada-Black.otf in Resources */,
 				2A58D64B1E97CF6B00E2084D /* Main.storyboard in Resources */,
@@ -307,8 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A86B2991E9BAF630018529F /* UIFont+Extensions.swift in Sources */,
 				2A1D35D91E97D2BD00AAAEE4 /* BasicButton.swift in Sources */,
 				2A1D35D81E97D2BA00AAAEE4 /* BasicLabel.swift in Sources */,
+				2A86B29C1E9BAFFB0018529F /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A86B2981E9BAF310018529F /* UIFont+Extensions.swift in Sources */,
 				2A1D35C51E97D1C700AAAEE4 /* TableOfContentsViewController.swift in Sources */,
 				2A58D6461E97CF6B00E2084D /* AppDelegate.swift in Sources */,
+				2A86B29B1E9BAFF50018529F /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +544,7 @@
 				2A1D35D61E97D2AC00AAAEE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A58D63D1E97CF6B00E2084D /* Build configuration list for PBXProject "ExperimentalSwift" */ = {
 			isa = XCConfigurationList;

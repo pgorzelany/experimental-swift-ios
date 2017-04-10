@@ -34,6 +34,6 @@ public class BasicLabel: UILabel {
     // MARK: Configuration
     
     private func configureLabel() {
-        backgroundColor = UIColor.blue
+        font = UIFont.getFont(thickness: .medium, size: .regular)
     }
 }

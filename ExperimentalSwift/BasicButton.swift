@@ -29,6 +29,12 @@ public class BasicButton: UIButton {
         configureButton()
     }
     
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layer.cornerRadius = frame.size.height / 2.0
+    }
+    
     public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         
@@ -38,8 +44,10 @@ public class BasicButton: UIButton {
     // MARK: Configuration
     
     private func configureButton() {
-        backgroundColor = UIColor.blue
+        clipsToBounds = true
+        titleLabel?.font = UIFont.getFont(thickness: .regular, size: .regular)
         setTitleColor(UIColor.white, for: .normal)
+        backgroundColor = UIColor.customBlue
         heightAnchor.constraint(equalToConstant: defaultHeight).isActive = true
     }
 }

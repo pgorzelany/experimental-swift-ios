@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>UIAppFonts</key>
+    <array>
+        <string>Mada-ExtraLight.otf</string>
+        <string>Mada-Light.otf</string>
+        <string>Mada-Medium.otf</string>
+        <string>Mada-Regular.otf</string>
+        <string>Mada-SemiBold.otf</string>
+        <string>Mada-Bold.otf</string>
+        <string>Mada-Black.otf</string>
+    </array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

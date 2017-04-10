@@ -6,8 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mada-Regular.otf">
+            <string>Mada-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Table Of Contents View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,22 +30,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3k-Ju-xDS">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-kd-BdM" customClass="BasicLabel" customModule="DesignableViews">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Choose a demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-kd-BdM" customClass="BasicLabel" customModule="DesignableViews">
                                         <rect key="frame" x="16" y="16" width="343" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Mada-Regular" family="Mada" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-WF-U7M">
+                                        <rect key="frame" x="86" y="52.5" width="203" height="203"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zmw-WF-U7M" secondAttribute="height" multiplier="1:1" id="fmf-7G-uzz"/>
+                                        </constraints>
+                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-xb-so5">
                                         <rect key="frame" x="16" y="271.5" width="343" height="104"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsk-6l-9nL" customClass="BasicButton" customModule="DesignableViews">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Led Blink"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BZ-8L-ueE" customClass="BasicButton" customModule="DesignableViews">
                                                 <rect key="frame" x="0.0" y="60" width="343" height="44"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Led Intensity"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -50,7 +62,10 @@
                                     <constraint firstItem="8Tw-kd-BdM" firstAttribute="top" secondItem="a3k-Ju-xDS" secondAttribute="top" constant="16" id="Bio-jw-Lfn"/>
                                     <constraint firstItem="8Tw-kd-BdM" firstAttribute="leading" secondItem="a3k-Ju-xDS" secondAttribute="leading" constant="16" id="CK0-Pc-iwp"/>
                                     <constraint firstAttribute="trailing" secondItem="8Tw-kd-BdM" secondAttribute="trailing" constant="16" id="Wdm-mC-TKH"/>
+                                    <constraint firstItem="zmw-WF-U7M" firstAttribute="centerX" secondItem="a3k-Ju-xDS" secondAttribute="centerX" id="YFz-nc-arl"/>
                                     <constraint firstItem="P9O-xb-so5" firstAttribute="leading" secondItem="a3k-Ju-xDS" secondAttribute="leading" constant="16" id="eUe-H1-QDw"/>
+                                    <constraint firstItem="zmw-WF-U7M" firstAttribute="top" secondItem="8Tw-kd-BdM" secondAttribute="bottom" constant="16" id="gqS-AM-bHr"/>
+                                    <constraint firstItem="P9O-xb-so5" firstAttribute="top" secondItem="zmw-WF-U7M" secondAttribute="bottom" constant="16" id="j8f-wd-1hC"/>
                                     <constraint firstAttribute="trailing" secondItem="P9O-xb-so5" secondAttribute="trailing" constant="16" id="p01-43-X9W"/>
                                 </constraints>
                             </view>
@@ -69,4 +84,7 @@
             <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="raspberry-placeholder" width="350" height="236"/>
+    </resources>
 </document>
