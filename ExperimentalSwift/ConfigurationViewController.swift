@@ -8,6 +8,7 @@
 
 import UIKit
 import DesignableViews
+import RxSwift
 
 class ConfigurationViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class ConfigurationViewController: UIViewController {
     
     private var settings = Settings.shared
     private var api = RaspberryApi.shared
+    private let disposeBag = DisposeBag()
 
     // MARK: Lifecycle
     
@@ -38,9 +40,19 @@ class ConfigurationViewController: UIViewController {
     @IBAction func testConnectionButtonTouched(_ sender: BasicButton) {
         let backendUrl = raspberryAddressTextField.text ?? ""
         api.testConnection(for: backendUrl)
+            .handleActivity(with: self)
+            .handleError(with: self, defaultMessage: nil)
+            .bindNext({[unowned self] in self.handleTestResponse()})
+            .addDisposableTo(disposeBag)
     }
     
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    
+    // MARK: Private methods
+    
+    private func handleTestResponse() {
+        showAlert(withMessage: "Connection OK!")
     }
 }

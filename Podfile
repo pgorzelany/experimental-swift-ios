@@ -11,6 +11,7 @@ target 'ExperimentalSwift' do
     pod 'SwiftyJSON', '~>3.1.1'
     pod 'RxSwift', '~>3.0'
     pod 'RxCocoa', '~>3.0'
+    pod 'RxAlamofire', '~>3.0'
 end
 
 post_install do |installer|

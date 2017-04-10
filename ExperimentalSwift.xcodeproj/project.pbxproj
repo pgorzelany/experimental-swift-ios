@@ -34,6 +34,10 @@
 		2A86B2A91E9BBBE60018529F /* RaspberryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2A81E9BBBE60018529F /* RaspberryApi.swift */; };
 		2A86B2AC1E9BBD020018529F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2AB1E9BBD020018529F /* Settings.swift */; };
 		2A86B2AF1E9BBF340018529F /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2AE1E9BBF340018529F /* ConfigurationViewController.swift */; };
+		2ACA3F7B1E9BCB110063F253 /* Observable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA3F7A1E9BCB110063F253 /* Observable+Extensions.swift */; };
+		2ACA3F7F1E9BCC720063F253 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA3F7E1E9BCC720063F253 /* CustomError.swift */; };
+		2ACA3F811E9BCD720063F253 /* ActivityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA3F801E9BCD720063F253 /* ActivityHandler.swift */; };
+		2ACA3F831E9BCD7C0063F253 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA3F821E9BCD7C0063F253 /* AlertHandler.swift */; };
 		A65FEC389E6E918A7A7E00AA /* Pods_ExperimentalSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48D526B85E896E9C4045BC9 /* Pods_ExperimentalSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +94,10 @@
 		2A86B2A81E9BBBE60018529F /* RaspberryApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaspberryApi.swift; sourceTree = "<group>"; };
 		2A86B2AB1E9BBD020018529F /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2A86B2AE1E9BBF340018529F /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		2ACA3F7A1E9BCB110063F253 /* Observable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Extensions.swift"; sourceTree = "<group>"; };
+		2ACA3F7E1E9BCC720063F253 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		2ACA3F801E9BCD720063F253 /* ActivityHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHandler.swift; sourceTree = "<group>"; };
+		2ACA3F821E9BCD7C0063F253 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		B055B3B2F0C3D64685EC8EF2 /* Pods-ExperimentalSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentalSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExperimentalSwift/Pods-ExperimentalSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		F48D526B85E896E9C4045BC9 /* Pods_ExperimentalSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExperimentalSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -221,6 +229,8 @@
 		2A86B2961E9BAF1F0018529F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2ACA3F7D1E9BCBC30063F253 /* Models */,
+				2ACA3F7C1E9BCB500063F253 /* Protocols */,
 				2A86B2AA1E9BBCDF0018529F /* Helpers */,
 				2A86B2A71E9BBBD30018529F /* API */,
 				2A86B2A41E9BBAC50018529F /* Views */,
@@ -250,6 +260,7 @@
 			children = (
 				2A86B2971E9BAF310018529F /* UIFont+Extensions.swift */,
 				2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */,
+				2ACA3F7A1E9BCB110063F253 /* Observable+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +295,23 @@
 				2A86B2AE1E9BBF340018529F /* ConfigurationViewController.swift */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		2ACA3F7C1E9BCB500063F253 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2ACA3F801E9BCD720063F253 /* ActivityHandler.swift */,
+				2ACA3F821E9BCD7C0063F253 /* AlertHandler.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2ACA3F7D1E9BCBC30063F253 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ACA3F7E1E9BCC720063F253 /* CustomError.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		EC60182D7CB065669FBC05BF /* Pods */ = {
@@ -480,10 +508,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A86B2981E9BAF310018529F /* UIFont+Extensions.swift in Sources */,
+				2ACA3F831E9BCD7C0063F253 /* AlertHandler.swift in Sources */,
 				2A86B2A91E9BBBE60018529F /* RaspberryApi.swift in Sources */,
 				2A1D35C51E97D1C700AAAEE4 /* TableOfContentsViewController.swift in Sources */,
 				2A86B2AF1E9BBF340018529F /* ConfigurationViewController.swift in Sources */,
+				2ACA3F811E9BCD720063F253 /* ActivityHandler.swift in Sources */,
 				2A86B2A61E9BBAD60018529F /* BasicNavigationBar.swift in Sources */,
+				2ACA3F7F1E9BCC720063F253 /* CustomError.swift in Sources */,
+				2ACA3F7B1E9BCB110063F253 /* Observable+Extensions.swift in Sources */,
 				2A58D6461E97CF6B00E2084D /* AppDelegate.swift in Sources */,
 				2A86B2A01E9BB29C0018529F /* LedBlinkViewController.swift in Sources */,
 				2A86B2AC1E9BBD020018529F /* Settings.swift in Sources */,

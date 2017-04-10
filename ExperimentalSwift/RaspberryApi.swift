@@ -7,6 +7,10 @@
 //
 
 import Foundation
+import RxAlamofire
+import Alamofire
+import RxSwift
+import SwiftyJSON
 
 class RaspberryApi {
     
@@ -36,12 +40,24 @@ class RaspberryApi {
         if parameters.count > 0  {
             endpoint = String(format: endpoint, arguments: parameters)
         }
-        return URL(string: "\(settings.backendUrl)/\(endpoint)")!
+        return URL(string: "http://\(backendUrl):8080/\(endpoint)")!
+    }
+    
+    private func performRequest(_ method: HTTPMethod, url: URL, parameters: [String: Any]?, encoding: ParameterEncoding, headers: [String: String]?) -> Observable<JSON> {
+        // Request string is used because if requestJSON was used, there was a problem with missing status code in response.
+        return RxAlamofire.requestString(method, url, parameters: parameters, encoding: encoding, headers: headers)
+            .validate()
+            .retry(2)
+            .toJson()
+            .observeOnMainScheduler()
     }
     
     // MARK: Public methods
     
-    func testConnection(for backendUrl: String) {
+    func testConnection(for backendUrl: String) -> Observable<Void> {
         let url = getUrl(forEndpoint: .test, backendUrl: backendUrl)
+        
+        return performRequest(.get, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .map({_ in return})
     }
 }
