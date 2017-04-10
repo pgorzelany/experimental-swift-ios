@@ -18,13 +18,14 @@ class ConfigurationViewController: UIViewController {
     // MARK: Properties
     
     private var settings = Settings.shared
+    private var api = RaspberryApi.shared
 
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        raspberryAddressTextField.text = settings.backendUrl
     }
     
     // MARK: Actions
@@ -35,7 +36,8 @@ class ConfigurationViewController: UIViewController {
     }
     
     @IBAction func testConnectionButtonTouched(_ sender: BasicButton) {
-        
+        let backendUrl = raspberryAddressTextField.text ?? ""
+        api.testConnection(for: backendUrl)
     }
     
     @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {

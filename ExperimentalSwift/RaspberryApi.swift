@@ -13,6 +13,7 @@ class RaspberryApi {
     // MARK: Endpoints
     
     enum Endpoint: String {
+        case test = "test"
         case ledOn = "led/%d/switch_on"
         case ledOff = "led/%d/switch_off"
         case startLedBlink = "led/%d/start_blink"
@@ -26,11 +27,11 @@ class RaspberryApi {
     
     // MARK: Properties
     
-    var settings = Settings.shared
+    lazy var settings = Settings.shared
     
     // MARK: Private methods
     
-    private func getUrl(forEndpoint endpoint: Endpoint, parameters: CVarArg...) -> URL {
+    private func getUrl(forEndpoint endpoint: Endpoint, backendUrl: String = Settings.shared.backendUrl, parameters: CVarArg...) -> URL {
         var endpoint = endpoint.rawValue
         if parameters.count > 0  {
             endpoint = String(format: endpoint, arguments: parameters)
@@ -40,5 +41,7 @@ class RaspberryApi {
     
     // MARK: Public methods
     
-    
+    func testConnection(for backendUrl: String) {
+        let url = getUrl(forEndpoint: .test, backendUrl: backendUrl)
+    }
 }
