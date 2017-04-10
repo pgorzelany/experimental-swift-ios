@@ -31,6 +31,8 @@
 		2A86B2A01E9BB29C0018529F /* LedBlinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B29F1E9BB29C0018529F /* LedBlinkViewController.swift */; };
 		2A86B2A21E9BB2A80018529F /* LedIntensityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2A11E9BB2A80018529F /* LedIntensityViewController.swift */; };
 		2A86B2A61E9BBAD60018529F /* BasicNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2A51E9BBAD60018529F /* BasicNavigationBar.swift */; };
+		2A86B2A91E9BBBE60018529F /* RaspberryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2A81E9BBBE60018529F /* RaspberryApi.swift */; };
+		2A86B2AC1E9BBD020018529F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2AB1E9BBD020018529F /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		2A86B29F1E9BB29C0018529F /* LedBlinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedBlinkViewController.swift; sourceTree = "<group>"; };
 		2A86B2A11E9BB2A80018529F /* LedIntensityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedIntensityViewController.swift; sourceTree = "<group>"; };
 		2A86B2A51E9BBAD60018529F /* BasicNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicNavigationBar.swift; sourceTree = "<group>"; };
+		2A86B2A81E9BBBE60018529F /* RaspberryApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaspberryApi.swift; sourceTree = "<group>"; };
+		2A86B2AB1E9BBD020018529F /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 		2A86B2961E9BAF1F0018529F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2A86B2AA1E9BBCDF0018529F /* Helpers */,
+				2A86B2A71E9BBBD30018529F /* API */,
 				2A86B2A41E9BBAC50018529F /* Views */,
 				2A86B2A31E9BBAB80018529F /* Extensions */,
 			);
@@ -236,6 +242,22 @@
 				2A86B2A51E9BBAD60018529F /* BasicNavigationBar.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		2A86B2A71E9BBBD30018529F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2A86B2A81E9BBBE60018529F /* RaspberryApi.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		2A86B2AA1E9BBCDF0018529F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2A86B2AB1E9BBD020018529F /* Settings.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,10 +394,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A86B2981E9BAF310018529F /* UIFont+Extensions.swift in Sources */,
+				2A86B2A91E9BBBE60018529F /* RaspberryApi.swift in Sources */,
 				2A1D35C51E97D1C700AAAEE4 /* TableOfContentsViewController.swift in Sources */,
 				2A86B2A61E9BBAD60018529F /* BasicNavigationBar.swift in Sources */,
 				2A58D6461E97CF6B00E2084D /* AppDelegate.swift in Sources */,
 				2A86B2A01E9BB29C0018529F /* LedBlinkViewController.swift in Sources */,
+				2A86B2AC1E9BBD020018529F /* Settings.swift in Sources */,
 				2A86B2A21E9BB2A80018529F /* LedIntensityViewController.swift in Sources */,
 				2A86B29B1E9BAFF50018529F /* UIColor+Extensions.swift in Sources */,
 			);
