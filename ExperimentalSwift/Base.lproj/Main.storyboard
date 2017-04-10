@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frq-1v-zqa">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Mada-Regular.otf">
-            <string>Mada-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--Table Of Contents View Controller-->
+        <!--Choose a demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TableOfContentsViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,49 +18,43 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3k-Ju-xDS">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Choose a demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tw-kd-BdM" customClass="BasicLabel" customModule="DesignableViews">
-                                        <rect key="frame" x="16" y="16" width="343" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Mada-Regular" family="Mada" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-WF-U7M">
-                                        <rect key="frame" x="86" y="52.5" width="203" height="203"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="zmw-WF-U7M" secondAttribute="height" multiplier="1:1" id="fmf-7G-uzz"/>
-                                        </constraints>
-                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-xb-so5">
-                                        <rect key="frame" x="16" y="271.5" width="343" height="104"/>
+                                        <rect key="frame" x="16" y="16" width="288" height="320"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-WF-U7M">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="o4R-JC-2LO"/>
+                                                </constraints>
+                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsk-6l-9nL" customClass="BasicButton" customModule="DesignableViews">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                                <rect key="frame" x="0.0" y="216" width="288" height="44"/>
                                                 <state key="normal" title="Led Blink"/>
+                                                <connections>
+                                                    <segue destination="dBi-5B-inw" kind="show" id="Jc5-kC-ULx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BZ-8L-ueE" customClass="BasicButton" customModule="DesignableViews">
-                                                <rect key="frame" x="0.0" y="60" width="343" height="44"/>
+                                                <rect key="frame" x="0.0" y="276" width="288" height="44"/>
                                                 <state key="normal" title="Led Intensity"/>
+                                                <connections>
+                                                    <segue destination="QEv-Hz-mF3" kind="show" id="6ps-0w-Jcx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="P9O-xb-so5" firstAttribute="centerY" secondItem="a3k-Ju-xDS" secondAttribute="centerY" id="1Un-aD-7y3"/>
-                                    <constraint firstItem="8Tw-kd-BdM" firstAttribute="top" secondItem="a3k-Ju-xDS" secondAttribute="top" constant="16" id="Bio-jw-Lfn"/>
-                                    <constraint firstItem="8Tw-kd-BdM" firstAttribute="leading" secondItem="a3k-Ju-xDS" secondAttribute="leading" constant="16" id="CK0-Pc-iwp"/>
-                                    <constraint firstAttribute="trailing" secondItem="8Tw-kd-BdM" secondAttribute="trailing" constant="16" id="Wdm-mC-TKH"/>
-                                    <constraint firstItem="zmw-WF-U7M" firstAttribute="centerX" secondItem="a3k-Ju-xDS" secondAttribute="centerX" id="YFz-nc-arl"/>
                                     <constraint firstItem="P9O-xb-so5" firstAttribute="leading" secondItem="a3k-Ju-xDS" secondAttribute="leading" constant="16" id="eUe-H1-QDw"/>
-                                    <constraint firstItem="zmw-WF-U7M" firstAttribute="top" secondItem="8Tw-kd-BdM" secondAttribute="bottom" constant="16" id="gqS-AM-bHr"/>
-                                    <constraint firstItem="P9O-xb-so5" firstAttribute="top" secondItem="zmw-WF-U7M" secondAttribute="bottom" constant="16" id="j8f-wd-1hC"/>
                                     <constraint firstAttribute="trailing" secondItem="P9O-xb-so5" secondAttribute="trailing" constant="16" id="p01-43-X9W"/>
+                                    <constraint firstItem="P9O-xb-so5" firstAttribute="top" secondItem="a3k-Ju-xDS" secondAttribute="top" constant="16" id="wSv-JJ-CIh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -78,13 +66,156 @@
                             <constraint firstAttribute="trailing" secondItem="a3k-Ju-xDS" secondAttribute="trailing" id="yn2-5D-2Ji"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Choose a demo" id="jZ4-9X-m0c"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1021.875" y="35.91549295774648"/>
+        </scene>
+        <!--Led Intensity-->
+        <scene sceneID="4vm-lZ-Sgw">
+            <objects>
+                <viewController storyboardIdentifier="LedIntensityViewController" id="QEv-Hz-mF3" customClass="LedIntensityViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bed-I8-hCo"/>
+                        <viewControllerLayoutGuide type="bottom" id="jkL-Oa-kLE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nHh-71-3kw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gL-Wb-uqe">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Rc-4h-eYQ">
+                                        <rect key="frame" x="16" y="16" width="288" height="282.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="led-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zYK-hZ-qit">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="cVj-8N-LXe"/>
+                                                </constraints>
+                                            </imageView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JdE-gE-Nia">
+                                                <rect key="frame" x="-2" y="216" width="292" height="31"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move the slider to change led intensity" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynP-xU-Hvz" customClass="BasicLabel" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="262" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Rc-4h-eYQ" secondAttribute="trailing" constant="16" id="D5D-2C-WGQ"/>
+                                    <constraint firstItem="1Rc-4h-eYQ" firstAttribute="leading" secondItem="9gL-Wb-uqe" secondAttribute="leading" constant="16" id="bu5-e7-lXi"/>
+                                    <constraint firstItem="1Rc-4h-eYQ" firstAttribute="top" secondItem="9gL-Wb-uqe" secondAttribute="top" constant="16" id="hFR-g3-lpA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9gL-Wb-uqe" secondAttribute="trailing" id="M9D-1Z-Z90"/>
+                            <constraint firstItem="9gL-Wb-uqe" firstAttribute="leading" secondItem="nHh-71-3kw" secondAttribute="leading" id="bOb-N2-4sH"/>
+                            <constraint firstItem="9gL-Wb-uqe" firstAttribute="top" secondItem="bed-I8-hCo" secondAttribute="bottom" id="qh6-bd-uyA"/>
+                            <constraint firstItem="jkL-Oa-kLE" firstAttribute="top" secondItem="9gL-Wb-uqe" secondAttribute="bottom" id="zlh-dR-4r2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Led Intensity" id="1fR-cK-skH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f54-1B-b7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2323.125" y="35.91549295774648"/>
+        </scene>
+        <!--Led Blink-->
+        <scene sceneID="y35-O1-kba">
+            <objects>
+                <viewController storyboardIdentifier="LedBlinkViewController" id="dBi-5B-inw" customClass="LedBlinkViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zve-nv-GQd"/>
+                        <viewControllerLayoutGuide type="bottom" id="eR7-p4-5FM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TQf-0Q-Yq3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDm-YF-TNq">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uEM-z6-ivv">
+                                        <rect key="frame" x="16" y="16" width="288" height="440"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="led-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-HT-8uI">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="TNp-1d-0X8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-hv-R2Q" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="216" width="288" height="44"/>
+                                                <state key="normal" title="Switch On"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-Rv-dSd" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="276" width="288" height="44"/>
+                                                <state key="normal" title="Switch Off"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-tF-HpA" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="336" width="288" height="44"/>
+                                                <state key="normal" title="Start Blinking"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHS-o1-Cif" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="396" width="288" height="44"/>
+                                                <state key="normal" title="Stop Blinking"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uEM-z6-ivv" secondAttribute="trailing" constant="16" id="6Rj-yk-SYI"/>
+                                    <constraint firstItem="uEM-z6-ivv" firstAttribute="top" secondItem="NDm-YF-TNq" secondAttribute="top" constant="16" id="QCd-IS-ot3"/>
+                                    <constraint firstItem="uEM-z6-ivv" firstAttribute="leading" secondItem="NDm-YF-TNq" secondAttribute="leading" constant="16" id="hMj-hc-mc2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NDm-YF-TNq" firstAttribute="leading" secondItem="TQf-0Q-Yq3" secondAttribute="leading" id="NbX-BT-y1j"/>
+                            <constraint firstAttribute="trailing" secondItem="NDm-YF-TNq" secondAttribute="trailing" id="RlB-vs-HBN"/>
+                            <constraint firstItem="eR7-p4-5FM" firstAttribute="top" secondItem="NDm-YF-TNq" secondAttribute="bottom" id="SPu-Dd-kPz"/>
+                            <constraint firstItem="NDm-YF-TNq" firstAttribute="top" secondItem="zve-nv-GQd" secondAttribute="bottom" id="qM4-P4-MBn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Led Blink" id="jX0-tg-D3X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laP-M2-Wo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668.75" y="35.91549295774648"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9T6-a3-fG7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="frq-1v-zqa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPt-zI-KR9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uXf-PZ-PeZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWO-dQ-OpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="36"/>
         </scene>
     </scenes>
     <resources>
+        <image name="led-placeholder" width="300" height="250"/>
         <image name="raspberry-placeholder" width="350" height="236"/>
     </resources>
 </document>

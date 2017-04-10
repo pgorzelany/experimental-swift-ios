@@ -28,6 +28,8 @@
 		2A86B2991E9BAF630018529F /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2971E9BAF310018529F /* UIFont+Extensions.swift */; };
 		2A86B29B1E9BAFF50018529F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */; };
 		2A86B29C1E9BAFFB0018529F /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */; };
+		2A86B2A01E9BB29C0018529F /* LedBlinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B29F1E9BB29C0018529F /* LedBlinkViewController.swift */; };
+		2A86B2A21E9BB2A80018529F /* LedIntensityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A86B2A11E9BB2A80018529F /* LedIntensityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		2A61E8421E97D0FB00096544 /* BasicLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicLabel.swift; sourceTree = "<group>"; };
 		2A86B2971E9BAF310018529F /* UIFont+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		2A86B29F1E9BB29C0018529F /* LedBlinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedBlinkViewController.swift; sourceTree = "<group>"; };
+		2A86B2A11E9BB2A80018529F /* LedIntensityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedIntensityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 			children = (
 				2A58D6491E97CF6B00E2084D /* Main.storyboard */,
 				2A1D35C31E97D1A900AAAEE4 /* TOC */,
+				2A86B29D1E9BB25A0018529F /* LedBlink */,
+				2A86B29E1E9BB2670018529F /* LedIntensity */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -195,6 +201,22 @@
 				2A86B29A1E9BAFF50018529F /* UIColor+Extensions.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		2A86B29D1E9BB25A0018529F /* LedBlink */ = {
+			isa = PBXGroup;
+			children = (
+				2A86B29F1E9BB29C0018529F /* LedBlinkViewController.swift */,
+			);
+			name = LedBlink;
+			sourceTree = "<group>";
+		};
+		2A86B29E1E9BB2670018529F /* LedIntensity */ = {
+			isa = PBXGroup;
+			children = (
+				2A86B2A11E9BB2A80018529F /* LedIntensityViewController.swift */,
+			);
+			name = LedIntensity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +355,8 @@
 				2A86B2981E9BAF310018529F /* UIFont+Extensions.swift in Sources */,
 				2A1D35C51E97D1C700AAAEE4 /* TableOfContentsViewController.swift in Sources */,
 				2A58D6461E97CF6B00E2084D /* AppDelegate.swift in Sources */,
+				2A86B2A01E9BB29C0018529F /* LedBlinkViewController.swift in Sources */,
+				2A86B2A21E9BB2A80018529F /* LedIntensityViewController.swift in Sources */,
 				2A86B29B1E9BAFF50018529F /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
