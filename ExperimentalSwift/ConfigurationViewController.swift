@@ -15,12 +15,19 @@ class ConfigurationViewController: UIViewController {
     // MARK: Outlets
     
     @IBOutlet weak var raspberryAddressTextField: UITextField!
+    @IBOutlet weak var raspberryPortTextField: UITextField!
     
     // MARK: Properties
     
     private var settings = Settings.shared
     private var api = RaspberryApi.shared
     private let disposeBag = DisposeBag()
+    
+    var backendUrlString: String {
+        let serverAddress = raspberryAddressTextField.text ?? ""
+        let serverPort = raspberryPortTextField.text ?? ""
+        return "\(serverAddress):\(serverPort)"
+    }
 
     // MARK: Lifecycle
     
@@ -28,18 +35,19 @@ class ConfigurationViewController: UIViewController {
         super.viewDidLoad()
 
         raspberryAddressTextField.text = settings.backendUrl
+        raspberryPortTextField.text = settings.backendPort
     }
     
     // MARK: Actions
     
     @IBAction func saveButtonTouched(_ sender: UIBarButtonItem) {
         settings.backendUrl = raspberryAddressTextField.text ?? ""
+        settings.backendPort = raspberryPortTextField.text ?? ""
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func testConnectionButtonTouched(_ sender: BasicButton) {
-        let backendUrl = raspberryAddressTextField.text ?? ""
-        api.testConnection(for: backendUrl)
+        api.testConnection(for: backendUrlString)
             .handleActivity(with: self)
             .handleError(with: self, defaultMessage: nil)
             .bindNext({[unowned self] in self.handleTestResponse()})

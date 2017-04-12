@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frq-1v-zqa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frq-1v-zqa">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -159,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-NL-kXx">
-                                        <rect key="frame" x="16" y="16" width="288" height="320"/>
+                                        <rect key="frame" x="16" y="16" width="288" height="380"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="configuration-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="oLW-DJ-f8v">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
@@ -173,8 +173,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYD-aU-7Vo" customClass="BasicButton" customModule="DesignableViews">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RaspberryPi ServerPort" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-4I-AOC">
                                                 <rect key="frame" x="0.0" y="276" width="288" height="44"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYD-aU-7Vo" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="336" width="288" height="44"/>
                                                 <state key="normal" title="Test Connection"/>
                                                 <connections>
                                                     <action selector="testConnectionButtonTouched:" destination="xPy-5L-D0M" eventType="touchUpInside" id="Sb6-hc-9sh"/>
@@ -182,6 +188,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="o8F-4I-AOC" firstAttribute="height" secondItem="dnM-kB-bQG" secondAttribute="height" id="5XQ-pE-RYr"/>
                                             <constraint firstItem="dnM-kB-bQG" firstAttribute="height" secondItem="xYD-aU-7Vo" secondAttribute="height" id="NHJ-i1-BfP"/>
                                         </constraints>
                                     </stackView>
@@ -215,6 +222,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="raspberryAddressTextField" destination="dnM-kB-bQG" id="TtM-9p-FUI"/>
+                        <outlet property="raspberryPortTextField" destination="o8F-4I-AOC" id="YBn-gv-TvI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nl3-6R-cCB" userLabel="First Responder" sceneMemberID="firstResponder"/>

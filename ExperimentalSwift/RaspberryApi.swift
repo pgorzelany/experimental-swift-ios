@@ -17,7 +17,7 @@ class RaspberryApi {
     // MARK: Endpoints
     
     enum Endpoint: String {
-        case test = "test"
+        case test = ""
         case ledOn = "led/%d/switch_on"
         case ledOff = "led/%d/switch_off"
         case startLedBlink = "led/%d/start_blink"
@@ -40,7 +40,7 @@ class RaspberryApi {
         if parameters.count > 0  {
             endpoint = String(format: endpoint, arguments: parameters)
         }
-        return URL(string: "http://\(backendUrl):8080/\(endpoint)")!
+        return URL(string: "http://\(backendUrl)/\(endpoint)")!
     }
     
     private func performRequest(_ method: HTTPMethod, url: URL, parameters: [String: Any]?, encoding: ParameterEncoding, headers: [String: String]?) -> Observable<JSON> {
