@@ -18,11 +18,11 @@ class RaspberryApi {
     
     enum Endpoint: String {
         case test = ""
-        case ledOn = "led/%d/switch_on"
-        case ledOff = "led/%d/switch_off"
-        case startLedBlink = "led/%d/start_blink"
-        case stopLedBlink = "led/%d/stop_blink"
-        case ledIntensity = "led/%d/intensity"
+        case ledOn = "led/switch_on"
+        case ledOff = "led/switch_off"
+        case startLedBlink = "led/start_blink"
+        case stopLedBlink = "led/stop_blink"
+        case ledIntensity = "led/intensity"
     }
     
     // MARK: Shared instance
@@ -58,6 +58,44 @@ class RaspberryApi {
         let url = getUrl(forEndpoint: .test, backendUrl: backendUrl)
         
         return performRequest(.get, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .map({_ in return})
+    }
+    
+    func switchLedOn() -> Observable<Void> {
+        let url = getUrl(forEndpoint: .ledOn)
+        
+        return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .map({_ in return})
+    }
+    
+    func switchLedOff() -> Observable<Void> {
+        let url = getUrl(forEndpoint: .ledOff)
+        
+        return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .map({_ in return})
+    }
+    
+    func startLedBlink() -> Observable<Void> {
+        let url = getUrl(forEndpoint: .startLedBlink)
+        
+        return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .map({_ in return})
+    }
+    
+    func stopLedBlink() -> Observable<Void> {
+        let url = getUrl(forEndpoint: .stopLedBlink)
+        
+        return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .map({_ in return})
+    }
+    
+    func setLedIntensity(_ intensity: Double) -> Observable<Void> {
+        let url = getUrl(forEndpoint: .stopLedBlink)
+        let params = [
+            "intensity": intensity
+        ]
+        
+        return performRequest(.patch, url: url, parameters: params, encoding: URLEncoding.default, headers: nil)
             .map({_ in return})
     }
 }

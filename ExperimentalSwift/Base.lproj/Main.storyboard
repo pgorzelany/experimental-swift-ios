@@ -261,18 +261,30 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0d-hv-R2Q" customClass="BasicButton" customModule="DesignableViews">
                                                 <rect key="frame" x="0.0" y="216" width="288" height="44"/>
                                                 <state key="normal" title="Switch On"/>
+                                                <connections>
+                                                    <action selector="switchLedOnButtonTouched:" destination="dBi-5B-inw" eventType="touchUpInside" id="Tpb-JL-psY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-Rv-dSd" customClass="BasicButton" customModule="DesignableViews">
                                                 <rect key="frame" x="0.0" y="276" width="288" height="44"/>
                                                 <state key="normal" title="Switch Off"/>
+                                                <connections>
+                                                    <action selector="switchLedOffButtonTouched:" destination="dBi-5B-inw" eventType="touchUpInside" id="51D-V9-Zii"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-tF-HpA" customClass="BasicButton" customModule="DesignableViews">
                                                 <rect key="frame" x="0.0" y="336" width="288" height="44"/>
                                                 <state key="normal" title="Start Blinking"/>
+                                                <connections>
+                                                    <action selector="startLedBlinkButtonTouched:" destination="dBi-5B-inw" eventType="touchUpInside" id="JQH-FY-jat"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHS-o1-Cif" customClass="BasicButton" customModule="DesignableViews">
                                                 <rect key="frame" x="0.0" y="396" width="288" height="44"/>
                                                 <state key="normal" title="Stop Blinking"/>
+                                                <connections>
+                                                    <action selector="stopLedBlinkButtonTouched:" destination="dBi-5B-inw" eventType="touchUpInside" id="iyc-io-eyT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
