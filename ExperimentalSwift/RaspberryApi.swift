@@ -35,7 +35,7 @@ class RaspberryApi {
     
     // MARK: Private methods
     
-    private func getUrl(forEndpoint endpoint: Endpoint, backendUrl: String = Settings.shared.backendUrl, parameters: CVarArg...) -> URL {
+    private func getUrl(forEndpoint endpoint: Endpoint, backendUrl: String = "\(Settings.shared.backendUrl):\(Settings.shared.backendPort)", parameters: CVarArg...) -> URL {
         var endpoint = endpoint.rawValue
         if parameters.count > 0  {
             endpoint = String(format: endpoint, arguments: parameters)
@@ -95,7 +95,7 @@ class RaspberryApi {
             "intensity": intensity
         ]
         
-        return performRequest(.patch, url: url, parameters: params, encoding: URLEncoding.default, headers: nil)
+        return performRequest(.patch, url: url, parameters: params, encoding: URLEncoding.queryString, headers: nil)
             .map({_ in return})
     }
 }
