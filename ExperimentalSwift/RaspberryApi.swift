@@ -90,7 +90,7 @@ class RaspberryApi {
     }
     
     func setLedIntensity(_ intensity: Double) -> Observable<Void> {
-        let url = getUrl(forEndpoint: .stopLedBlink)
+        let url = getUrl(forEndpoint: .ledIntensity)
         let params = [
             "intensity": intensity
         ]

@@ -138,6 +138,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Led Intensity" id="1fR-cK-skH"/>
+                    <connections>
+                        <outlet property="intensitySlider" destination="JdE-gE-Nia" id="uj7-2E-lH5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f54-1B-b7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

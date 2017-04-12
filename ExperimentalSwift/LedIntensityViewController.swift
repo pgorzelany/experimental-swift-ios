@@ -7,29 +7,48 @@
 //
 
 import UIKit
+import RxSwift
 
 class LedIntensityViewController: UIViewController {
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var intensitySlider: UISlider!
+    
+    // MARK: Properties
+    
+    private let api = RaspberryApi.shared
+    private let disposeBag = DisposeBag()
+    
+    // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configureController()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: Configuration
+    
+    private func configureController() {
+        setBindings()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func setBindings() {
+        intensitySlider.rx.value
+            .asObservable()
+            .throttle(0.3, scheduler: MainScheduler.instance)
+            .map({Double($0)})
+            .bindNext({[unowned self] in self.setLedIntensity($0)})
+            .addDisposableTo(disposeBag)
     }
-    */
-
+    
+    // MARK: Helpers
+    
+    private func setLedIntensity(_ intensity: Double) {
+        api.setLedIntensity(intensity)
+            .handleError(with: self, defaultMessage: "Could not set intensity")
+            .subscribe()
+            .addDisposableTo(disposeBag)
+    }
 }
