@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A194A2D1EAF632500EB9642 /* NetworkScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A194A2C1EAF632500EB9642 /* NetworkScannerViewController.swift */; };
+		2A194A301EAF656400EB9642 /* NetworkDeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A194A2F1EAF656400EB9642 /* NetworkDeviceTableViewCell.swift */; };
 		2A1D35C51E97D1C700AAAEE4 /* TableOfContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D35C41E97D1C700AAAEE4 /* TableOfContentsViewController.swift */; };
 		2A1D35CF1E97D2AC00AAAEE4 /* DesignableViews.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A1D35CD1E97D2AC00AAAEE4 /* DesignableViews.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A1D35D21E97D2AC00AAAEE4 /* DesignableViews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D35CB1E97D2AC00AAAEE4 /* DesignableViews.framework */; };
@@ -67,6 +69,8 @@
 
 /* Begin PBXFileReference section */
 		154BD52313EA96ABB98C0758 /* Pods-ExperimentalSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentalSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExperimentalSwift/Pods-ExperimentalSwift.release.xcconfig"; sourceTree = "<group>"; };
+		2A194A2C1EAF632500EB9642 /* NetworkScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkScannerViewController.swift; sourceTree = "<group>"; };
+		2A194A2F1EAF656400EB9642 /* NetworkDeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDeviceTableViewCell.swift; sourceTree = "<group>"; };
 		2A1D35C11E97D14200AAAEE4 /* BasicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		2A1D35C41E97D1C700AAAEE4 /* TableOfContentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableOfContentsViewController.swift; sourceTree = "<group>"; };
 		2A1D35CB1E97D2AC00AAAEE4 /* DesignableViews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignableViews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,23 @@
 				F48D526B85E896E9C4045BC9 /* Pods_ExperimentalSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A194A2B1EAF630C00EB9642 /* NetworkScanner */ = {
+			isa = PBXGroup;
+			children = (
+				2A194A2C1EAF632500EB9642 /* NetworkScannerViewController.swift */,
+				2A194A2E1EAF654500EB9642 /* NetworkDeviceTableCell */,
+			);
+			name = NetworkScanner;
+			sourceTree = "<group>";
+		};
+		2A194A2E1EAF654500EB9642 /* NetworkDeviceTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A194A2F1EAF656400EB9642 /* NetworkDeviceTableViewCell.swift */,
+			);
+			name = NetworkDeviceTableCell;
 			sourceTree = "<group>";
 		};
 		2A1D35C31E97D1A900AAAEE4 /* TOC */ = {
@@ -210,6 +231,7 @@
 				2A58D6491E97CF6B00E2084D /* Main.storyboard */,
 				2A1D35C31E97D1A900AAAEE4 /* TOC */,
 				2A86B2AD1E9BBF1E0018529F /* Configuration */,
+				2A194A2B1EAF630C00EB9642 /* NetworkScanner */,
 				2A86B29D1E9BB25A0018529F /* LedBlink */,
 				2A86B29E1E9BB2670018529F /* LedIntensity */,
 			);
@@ -508,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A194A301EAF656400EB9642 /* NetworkDeviceTableViewCell.swift in Sources */,
 				2A86B2981E9BAF310018529F /* UIFont+Extensions.swift in Sources */,
 				2ACA3F831E9BCD7C0063F253 /* AlertHandler.swift in Sources */,
 				2A86B2A91E9BBBE60018529F /* RaspberryApi.swift in Sources */,
@@ -522,6 +545,7 @@
 				2A86B2AC1E9BBD020018529F /* Settings.swift in Sources */,
 				2A86B2A21E9BB2A80018529F /* LedIntensityViewController.swift in Sources */,
 				2A86B29B1E9BAFF50018529F /* UIColor+Extensions.swift in Sources */,
+				2A194A2D1EAF632500EB9642 /* NetworkScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

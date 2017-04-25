@@ -12,6 +12,7 @@ target 'ExperimentalSwift' do
     pod 'RxSwift', '~>3.0'
     pod 'RxCocoa', '~>3.0'
     pod 'RxAlamofire', '~>3.0'
+    pod 'MMLanScan'
 end
 
 post_install do |installer|

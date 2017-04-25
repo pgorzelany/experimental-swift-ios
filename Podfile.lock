@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - MMLanScan (2.1.2)
   - RxAlamofire (3.0.2):
     - RxAlamofire/Core (= 3.0.2)
   - RxAlamofire/Core (3.0.2):
@@ -11,6 +12,7 @@ PODS:
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - MMLanScan
   - RxAlamofire (~> 3.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
@@ -18,11 +20,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  MMLanScan: dee389a3cc85166187f66a4037ff24dc88922d00
   RxAlamofire: bc53604b29fd2d220cfaa490c736cc4500819f34
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 89f04752ed05e1a4175e8ec1b4a4534fb75364e7
+PODFILE CHECKSUM: bb2523eb0cfd8b82485f2b897e81996c3187ac84
 
 COCOAPODS: 1.2.0

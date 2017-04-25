@@ -43,7 +43,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="xPy-5L-D0M" kind="show" id="EGP-QO-sVS"/>
+                                                    <segue destination="9fq-28-j5v" kind="show" id="ZWq-Ci-ZnT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsk-6l-9nL" customClass="BasicButton" customModule="DesignableViews">
@@ -159,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyx-X6-Q6s">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Vc2-NL-kXx">
                                         <rect key="frame" x="16" y="16" width="288" height="380"/>
@@ -235,7 +235,117 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1668.75" y="-626.4084507042254"/>
+            <point key="canvasLocation" x="2323" y="-631"/>
+        </scene>
+        <!--Network Scanner-->
+        <scene sceneID="Rxu-iE-OK3">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9fq-28-j5v" customClass="NetworkScannerViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BbZ-4p-fTm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z6p-Ec-fmR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="760-mW-nKb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UCf-ac-R9q">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" verticalCompressionResistancePriority="1000" placeholder="search for hostname" translatesAutoresizingMaskIntoConstraints="NO" id="j12-7g-RoF">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="9fq-28-j5v" id="WAb-UA-n0c"/>
+                                        </connections>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="138" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-uH-A2W">
+                                        <rect key="frame" x="0.0" y="60" width="320" height="444"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" rowHeight="138" id="CZ0-Gd-SBN" customClass="NetworkDeviceTableViewCell" customModule="ExperimentalSwift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="138"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CZ0-Gd-SBN" id="VRL-N5-NqU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="137.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="x9g-fd-CA4">
+                                                            <rect key="frame" x="16" y="8" width="288" height="121.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Hostname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGd-re-Dde" customClass="BasicLabel" customModule="DesignableViews">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="IP Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-yC-p9H" customClass="BasicLabel" customModule="DesignableViews">
+                                                                    <rect key="frame" x="0.0" y="25.5" width="288" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Mac Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnX-1N-LR1" customClass="BasicLabel" customModule="DesignableViews">
+                                                                    <rect key="frame" x="0.0" y="50.5" width="288" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Subnet Mask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNe-Qd-8sq" customClass="BasicLabel" customModule="DesignableViews">
+                                                                    <rect key="frame" x="0.0" y="76" width="288" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hh8-Xm-edk" customClass="BasicLabel" customModule="DesignableViews">
+                                                                    <rect key="frame" x="0.0" y="101" width="288" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="x9g-fd-CA4" secondAttribute="trailing" constant="16" id="7VT-Sd-5jg"/>
+                                                        <constraint firstItem="x9g-fd-CA4" firstAttribute="top" secondItem="VRL-N5-NqU" secondAttribute="top" constant="8" id="OIs-s8-1po"/>
+                                                        <constraint firstAttribute="bottom" secondItem="x9g-fd-CA4" secondAttribute="bottom" constant="8" id="akI-3S-LTO"/>
+                                                        <constraint firstItem="x9g-fd-CA4" firstAttribute="leading" secondItem="VRL-N5-NqU" secondAttribute="leading" constant="16" id="j2i-BO-tNA"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="brandLabel" destination="Hh8-Xm-edk" id="Nao-nD-oky"/>
+                                                    <outlet property="hostnameLabel" destination="qGd-re-Dde" id="pz9-JD-FET"/>
+                                                    <outlet property="ipAddressLabel" destination="6Hy-yC-p9H" id="ZEU-i4-5N5"/>
+                                                    <outlet property="macAddressLabel" destination="PnX-1N-LR1" id="YLC-I4-lEu"/>
+                                                    <outlet property="subnetMaskLabel" destination="VNe-Qd-8sq" id="lda-1B-F84"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9fq-28-j5v" id="Tvi-wn-Gt7"/>
+                                            <outlet property="delegate" destination="9fq-28-j5v" id="amO-Kc-xMP"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UCf-ac-R9q" secondAttribute="trailing" id="4DO-4i-Aax"/>
+                            <constraint firstItem="UCf-ac-R9q" firstAttribute="leading" secondItem="760-mW-nKb" secondAttribute="leading" id="Jf8-0E-KxX"/>
+                            <constraint firstItem="UCf-ac-R9q" firstAttribute="top" secondItem="BbZ-4p-fTm" secondAttribute="bottom" id="tMU-1O-xrm"/>
+                            <constraint firstItem="Z6p-Ec-fmR" firstAttribute="top" secondItem="UCf-ac-R9q" secondAttribute="bottom" id="xg7-Km-9mc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Network Scanner" id="kLI-Pb-CUM"/>
+                    <connections>
+                        <outlet property="tableView" destination="rfH-uH-A2W" id="3y2-cB-7Dc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZY1-jW-hf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669" y="-631"/>
         </scene>
         <!--Led Blink-->
         <scene sceneID="y35-O1-kba">

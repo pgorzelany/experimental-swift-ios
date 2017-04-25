@@ -9,6 +9,7 @@
 import UIKit
 import DesignableViews
 import RxSwift
+import MMLanScan
 
 class ConfigurationViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class ConfigurationViewController: UIViewController {
     private var settings = Settings.shared
     private var api = RaspberryApi.shared
     private let disposeBag = DisposeBag()
+    private var device: Device?
     
     var backendUrlString: String {
         let serverAddress = raspberryAddressTextField.text ?? ""
@@ -34,8 +36,12 @@ class ConfigurationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        raspberryAddressTextField.text = settings.backendUrl
+        raspberryAddressTextField.text = device?.ipAddress ?? settings.backendUrl
         raspberryPortTextField.text = settings.backendPort
+    }
+    
+    func configure(with device: Device) {
+        self.device = device
     }
     
     // MARK: Actions
@@ -43,14 +49,14 @@ class ConfigurationViewController: UIViewController {
     @IBAction func saveButtonTouched(_ sender: UIBarButtonItem) {
         settings.backendUrl = raspberryAddressTextField.text ?? ""
         settings.backendPort = raspberryPortTextField.text ?? ""
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func testConnectionButtonTouched(_ sender: BasicButton) {
         api.testConnection(for: backendUrlString)
             .handleActivity(with: self)
             .handleError(with: self, defaultMessage: nil)
-            .bindNext({[unowned self] in self.handleTestResponse()})
+            .subscribe(onNext: { [unowned self] in self.handleTestResponse()})
             .addDisposableTo(disposeBag)
     }
     
