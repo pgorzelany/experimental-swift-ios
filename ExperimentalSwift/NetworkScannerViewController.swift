@@ -71,19 +71,14 @@ extension NetworkScannerViewController: MMLANScannerDelegate {
     }
     
     func lanScanDidFindNewDevice(_ device: Device!) {
-        print("Found new device: \(device)")
         devices.append(device)
         filterDevices(with: "")
         tableView.reloadData()
     }
     
     func lanScanDidFinishScanning(with status: MMLanScannerStatus) {
-        print("Finished scanning")
+        showAlert(withMessage: "Finished network scan")
         networkScanner.stop()
-    }
-    
-    func lanScanProgressPinged(_ pingedHosts: Float, from overallHosts: Int) {
-        print("Pinged \(pingedHosts) from \(overallHosts)")
     }
 }
 
