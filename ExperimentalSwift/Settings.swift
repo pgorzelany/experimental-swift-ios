@@ -27,7 +27,7 @@ class Settings {
     
     var backendUrl: String {
         get {
-            return self.storage.object(forKey: Keys.backendUrl.rawValue) as? String ?? ""
+            return self.storage.object(forKey: Keys.backendUrl.rawValue) as? String ?? "0.0.0.0"
         } set {
             self.storage.set(newValue, forKey: Keys.backendUrl.rawValue)
         }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frq-1v-zqa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frq-1v-zqa">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -101,19 +101,19 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Rc-4h-eYQ">
-                                        <rect key="frame" x="16" y="16" width="288" height="282.5"/>
+                                        <rect key="frame" x="24" y="16" width="272" height="303"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="led-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zYK-hZ-qit">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="272" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="cVj-8N-LXe"/>
                                                 </constraints>
                                             </imageView>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JdE-gE-Nia">
-                                                <rect key="frame" x="-2" y="216" width="292" height="31"/>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JdE-gE-Nia">
+                                                <rect key="frame" x="-2" y="216" width="276" height="31"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move the slider to change led intensity" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynP-xU-Hvz" customClass="BasicLabel" customModule="DesignableViews">
-                                                <rect key="frame" x="0.0" y="262" width="288" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="262" width="272" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -123,8 +123,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="1Rc-4h-eYQ" secondAttribute="trailing" constant="16" id="D5D-2C-WGQ"/>
-                                    <constraint firstItem="1Rc-4h-eYQ" firstAttribute="leading" secondItem="9gL-Wb-uqe" secondAttribute="leading" constant="16" id="bu5-e7-lXi"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Rc-4h-eYQ" secondAttribute="trailing" constant="24" id="D5D-2C-WGQ"/>
+                                    <constraint firstItem="1Rc-4h-eYQ" firstAttribute="leading" secondItem="9gL-Wb-uqe" secondAttribute="leading" constant="24" id="bu5-e7-lXi"/>
                                     <constraint firstItem="1Rc-4h-eYQ" firstAttribute="top" secondItem="9gL-Wb-uqe" secondAttribute="top" constant="16" id="hFR-g3-lpA"/>
                                 </constraints>
                             </view>
@@ -174,7 +174,7 @@
                                                 <rect key="frame" x="0.0" y="216" width="288" height="44"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RaspberryPi ServerPort" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8F-4I-AOC">
                                                 <rect key="frame" x="0.0" y="276" width="288" height="44"/>
