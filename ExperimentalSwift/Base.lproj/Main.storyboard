@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-xb-so5">
-                                        <rect key="frame" x="16" y="16" width="288" height="380"/>
+                                        <rect key="frame" x="16" y="16" width="288" height="440"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-WF-U7M">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
@@ -58,6 +59,13 @@
                                                 <state key="normal" title="Led Intensity"/>
                                                 <connections>
                                                     <segue destination="QEv-Hz-mF3" kind="show" id="6ps-0w-Jcx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibC-ab-yh4" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="396" width="288" height="44"/>
+                                                <state key="normal" title="One Digit Display"/>
+                                                <connections>
+                                                    <segue destination="pLN-7u-hbF" kind="show" id="nVD-Qr-xM8"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -145,6 +153,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f54-1B-b7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2323.125" y="35.91549295774648"/>
+        </scene>
+        <!--One Digit Segment Display View Controller-->
+        <scene sceneID="6MV-dY-OpE">
+            <objects>
+                <viewController storyboardIdentifier="OneDigitSegmentDisplayViewController" id="pLN-7u-hbF" customClass="OneDigitSegmentDisplayViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZfX-Ij-ZIX"/>
+                        <viewControllerLayoutGuide type="bottom" id="cMe-6n-yd1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Aie-YS-nhc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="VGf-7l-BZm">
+                                <rect key="frame" x="16" y="239" width="288" height="90"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7KY-DX-RKr">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOh-b9-nLJ" customClass="BasicButton" customModule="DesignableViews">
+                                        <rect key="frame" x="0.0" y="46" width="288" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="displayDigit:" destination="pLN-7u-hbF" eventType="touchUpInside" id="bas-w5-tpo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VGf-7l-BZm" firstAttribute="centerX" secondItem="Aie-YS-nhc" secondAttribute="centerX" id="8U1-Oi-QjI"/>
+                            <constraint firstItem="VGf-7l-BZm" firstAttribute="leading" secondItem="Aie-YS-nhc" secondAttribute="leadingMargin" id="98P-IN-STw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VGf-7l-BZm" secondAttribute="trailing" id="QaL-Kz-C8y"/>
+                            <constraint firstItem="VGf-7l-BZm" firstAttribute="centerY" secondItem="Aie-YS-nhc" secondAttribute="centerY" id="drR-cP-Kx2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="digitTextField" destination="7KY-DX-RKr" id="dI0-YZ-zIs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GxK-QE-jzS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669" y="698"/>
         </scene>
         <!--Configuration-->
         <scene sceneID="bn3-qk-Byg">
@@ -280,25 +335,31 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="IP Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-yC-p9H" customClass="BasicLabel" customModule="DesignableViews">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="288" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="20.5" width="288" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Mac Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnX-1N-LR1" customClass="BasicLabel" customModule="DesignableViews">
-                                                                    <rect key="frame" x="0.0" y="50.5" width="288" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="41" width="288" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Subnet Mask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNe-Qd-8sq" customClass="BasicLabel" customModule="DesignableViews">
-                                                                    <rect key="frame" x="0.0" y="76" width="288" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="61.5" width="288" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hh8-Xm-edk" customClass="BasicLabel" customModule="DesignableViews">
-                                                                    <rect key="frame" x="0.0" y="101" width="288" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="82" width="288" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mac Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP9-9w-0LO" customClass="BasicLabel" customModule="DesignableViews">
+                                                                    <rect key="frame" x="0.0" y="102.5" width="288" height="19"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -317,6 +378,7 @@
                                                     <outlet property="brandLabel" destination="Hh8-Xm-edk" id="Nao-nD-oky"/>
                                                     <outlet property="hostnameLabel" destination="qGd-re-Dde" id="pz9-JD-FET"/>
                                                     <outlet property="ipAddressLabel" destination="6Hy-yC-p9H" id="ZEU-i4-5N5"/>
+                                                    <outlet property="macAddressInfoLabel" destination="dP9-9w-0LO" id="C7Y-J3-vtN"/>
                                                     <outlet property="macAddressLabel" destination="PnX-1N-LR1" id="YLC-I4-lEu"/>
                                                     <outlet property="subnetMaskLabel" destination="VNe-Qd-8sq" id="lda-1B-F84"/>
                                                 </connections>

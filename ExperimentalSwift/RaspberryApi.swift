@@ -23,6 +23,7 @@ class RaspberryApi {
         case startLedBlink = "led/start_blink"
         case stopLedBlink = "led/stop_blink"
         case ledIntensity = "led/intensity"
+        case oneDigitDisplay = "displayDigit/%d"
     }
     
     // MARK: Shared instance
@@ -96,6 +97,13 @@ class RaspberryApi {
         ]
         
         return performRequest(.patch, url: url, parameters: params, encoding: URLEncoding.queryString, headers: nil)
+            .map({_ in return})
+    }
+    
+    func displayDigit(_ digit: Int) -> Observable<Void> {
+        let url = getUrl(forEndpoint: .oneDigitDisplay, parameters: digit)
+        
+        return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .map({_ in return})
     }
 }

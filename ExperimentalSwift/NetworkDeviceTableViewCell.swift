@@ -19,6 +19,7 @@ class NetworkDeviceTableViewCell: UITableViewCell {
     @IBOutlet weak var macAddressLabel: BasicLabel!
     @IBOutlet weak var subnetMaskLabel: BasicLabel!
     @IBOutlet weak var brandLabel: BasicLabel!
+    @IBOutlet weak var macAddressInfoLabel: BasicLabel!
     
     // MARK: Lifecycle
 
@@ -35,5 +36,6 @@ class NetworkDeviceTableViewCell: UITableViewCell {
         macAddressLabel.text = device.macAddress
         subnetMaskLabel.text = device.subnetMask
         brandLabel.text = device.brand
+        macAddressInfoLabel.text = device.macAddressLabel()
     }
 }
