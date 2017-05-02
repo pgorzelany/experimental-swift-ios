@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-xb-so5">
-                                        <rect key="frame" x="16" y="16" width="288" height="380"/>
+                                        <rect key="frame" x="16" y="16" width="288" height="440"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="raspberry-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-WF-U7M">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="200"/>
@@ -66,6 +66,13 @@
                                                 <state key="normal" title="One Digit Display"/>
                                                 <connections>
                                                     <segue destination="pLN-7u-hbF" kind="show" id="nVD-Qr-xM8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqU-5k-QCq" customClass="BasicButton" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="396" width="288" height="44"/>
+                                                <state key="normal" title="Color LED"/>
+                                                <connections>
+                                                    <segue destination="CkR-fd-mQY" kind="show" id="4f7-7y-gko"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -154,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="2323.125" y="35.91549295774648"/>
         </scene>
-        <!--One Digit Segment Display View Controller-->
+        <!--One Digit Segment Display-->
         <scene sceneID="6MV-dY-OpE">
             <objects>
                 <viewController storyboardIdentifier="OneDigitSegmentDisplayViewController" id="pLN-7u-hbF" customClass="OneDigitSegmentDisplayViewController" customModule="ExperimentalSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,6 +216,7 @@
                             <outletCollection property="gestureRecognizers" destination="LEV-fj-uJG" appends="YES" id="mNR-py-2Ch"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="One Digit Segment Display" id="wEn-u3-V8p"/>
                     <connections>
                         <outlet property="digitTextField" destination="7KY-DX-RKr" id="dI0-YZ-zIs"/>
                     </connections>
@@ -221,6 +229,85 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1669" y="698"/>
+        </scene>
+        <!--RGB LED-->
+        <scene sceneID="zUV-fM-aUR">
+            <objects>
+                <viewController id="CkR-fd-mQY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Whp-jA-v7k"/>
+                        <viewControllerLayoutGuide type="bottom" id="f3v-kv-Sfa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8fM-EB-2nj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="L0D-3A-xKc">
+                                <rect key="frame" x="24" y="88" width="272" height="329"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rgb-led-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="00l-Ib-Eut">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="54y-3b-J27"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bK6-uL-ggh">
+                                        <rect key="frame" x="0.0" y="212" width="272" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqe-vr-oBz" customClass="BasicLabel" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="0.0" width="223" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ChK-HE-kht">
+                                                <rect key="frame" x="223" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-ox-hSF">
+                                        <rect key="frame" x="0.0" y="255" width="272" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOG-IO-IQH" customClass="BasicLabel" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="0.0" width="223" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3uZ-vx-hBn">
+                                                <rect key="frame" x="223" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="523-hk-iHx">
+                                        <rect key="frame" x="0.0" y="298" width="272" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tN-dT-200" customClass="BasicLabel" customModule="DesignableViews">
+                                                <rect key="frame" x="0.0" y="0.0" width="223" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0QZ-tn-jT7">
+                                                <rect key="frame" x="223" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L0D-3A-xKc" firstAttribute="top" secondItem="Whp-jA-v7k" secondAttribute="bottom" constant="24" id="W2z-X2-ovE"/>
+                            <constraint firstAttribute="trailing" secondItem="L0D-3A-xKc" secondAttribute="trailing" constant="24" id="Yml-AV-nGN"/>
+                            <constraint firstItem="L0D-3A-xKc" firstAttribute="leading" secondItem="8fM-EB-2nj" secondAttribute="leading" constant="24" id="sVR-ex-Qe8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RGB LED" id="QSe-Ya-WQ7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qi3-qa-LwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317.5" y="690.84507042253517"/>
         </scene>
         <!--Configuration-->
         <scene sceneID="bn3-qk-Byg">
@@ -530,6 +617,7 @@
         <image name="configuration-placeholder" width="256" height="256"/>
         <image name="led-placeholder" width="300" height="250"/>
         <image name="raspberry-placeholder" width="350" height="236"/>
+        <image name="rgb-led-placeholder" width="350" height="262"/>
         <image name="segment-display-placeholder" width="300" height="300"/>
     </resources>
 </document>
