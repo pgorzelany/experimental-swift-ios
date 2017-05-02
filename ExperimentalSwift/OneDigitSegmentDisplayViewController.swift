@@ -25,24 +25,14 @@ class OneDigitSegmentDisplayViewController: UIViewController {
     
     private let rasberryApi = RaspberryApi.shared
     private let disposeBag = DisposeBag()
-    
-    // MARK: Initializers
-    
-    // MARK: Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
+
     // MARK: Actions
     
     @IBAction func displayDigit(_ sender: BasicButton) {
         if let digitString = digitTextField.text, let digit = Int(digitString) {
             rasberryApi.displayDigit(digit)
                 .handleActivity(with: self)
-                .handleError(with: self, defaultMessage: "Something went wrong while switching led")
+                .handleError(with: self, defaultMessage: "Something went wrong while setting digit display")
                 .subscribe()
                 .addDisposableTo(disposeBag)
         }

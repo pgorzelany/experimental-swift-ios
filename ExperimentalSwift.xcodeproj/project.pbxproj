@@ -41,6 +41,8 @@
 		2ACA3F811E9BCD720063F253 /* ActivityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA3F801E9BCD720063F253 /* ActivityHandler.swift */; };
 		2ACA3F831E9BCD7C0063F253 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA3F821E9BCD7C0063F253 /* AlertHandler.swift */; };
 		55827CE41EB7E4A800EDE0BC /* OneDigitSegmentDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55827CE31EB7E4A800EDE0BC /* OneDigitSegmentDisplayViewController.swift */; };
+		55CD2ED01EB8C249009E90B4 /* RGBLedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD2ECF1EB8C249009E90B4 /* RGBLedViewController.swift */; };
+		55CD2ED21EB8C2CF009E90B4 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CD2ED11EB8C2CF009E90B4 /* RGBColor.swift */; };
 		A65FEC389E6E918A7A7E00AA /* Pods_ExperimentalSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48D526B85E896E9C4045BC9 /* Pods_ExperimentalSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,8 @@
 		2ACA3F801E9BCD720063F253 /* ActivityHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHandler.swift; sourceTree = "<group>"; };
 		2ACA3F821E9BCD7C0063F253 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		55827CE31EB7E4A800EDE0BC /* OneDigitSegmentDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneDigitSegmentDisplayViewController.swift; sourceTree = "<group>"; };
+		55CD2ECF1EB8C249009E90B4 /* RGBLedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBLedViewController.swift; sourceTree = "<group>"; };
+		55CD2ED11EB8C2CF009E90B4 /* RGBColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		B055B3B2F0C3D64685EC8EF2 /* Pods-ExperimentalSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExperimentalSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExperimentalSwift/Pods-ExperimentalSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		F48D526B85E896E9C4045BC9 /* Pods_ExperimentalSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExperimentalSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -237,6 +241,7 @@
 				2A86B29D1E9BB25A0018529F /* LedBlink */,
 				2A86B29E1E9BB2670018529F /* LedIntensity */,
 				55827CE21EB7E45700EDE0BC /* OneSegmentDigitDisplay */,
+				55CD2ECE1EB8C229009E90B4 /* RGBLedSwitches */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACA3F7E1E9BCC720063F253 /* CustomError.swift */,
+				55CD2ED11EB8C2CF009E90B4 /* RGBColor.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -345,6 +351,14 @@
 				55827CE31EB7E4A800EDE0BC /* OneDigitSegmentDisplayViewController.swift */,
 			);
 			name = OneSegmentDigitDisplay;
+			sourceTree = "<group>";
+		};
+		55CD2ECE1EB8C229009E90B4 /* RGBLedSwitches */ = {
+			isa = PBXGroup;
+			children = (
+				55CD2ECF1EB8C249009E90B4 /* RGBLedViewController.swift */,
+			);
+			name = RGBLedSwitches;
 			sourceTree = "<group>";
 		};
 		EC60182D7CB065669FBC05BF /* Pods */ = {
@@ -548,6 +562,7 @@
 				2A1D35C51E97D1C700AAAEE4 /* TableOfContentsViewController.swift in Sources */,
 				55827CE41EB7E4A800EDE0BC /* OneDigitSegmentDisplayViewController.swift in Sources */,
 				2A86B2AF1E9BBF340018529F /* ConfigurationViewController.swift in Sources */,
+				55CD2ED21EB8C2CF009E90B4 /* RGBColor.swift in Sources */,
 				2ACA3F811E9BCD720063F253 /* ActivityHandler.swift in Sources */,
 				2A86B2A61E9BBAD60018529F /* BasicNavigationBar.swift in Sources */,
 				2ACA3F7F1E9BCC720063F253 /* CustomError.swift in Sources */,
@@ -555,6 +570,7 @@
 				2A58D6461E97CF6B00E2084D /* AppDelegate.swift in Sources */,
 				2A86B2A01E9BB29C0018529F /* LedBlinkViewController.swift in Sources */,
 				2A86B2AC1E9BBD020018529F /* Settings.swift in Sources */,
+				55CD2ED01EB8C249009E90B4 /* RGBLedViewController.swift in Sources */,
 				2A86B2A21E9BB2A80018529F /* LedIntensityViewController.swift in Sources */,
 				2A86B29B1E9BAFF50018529F /* UIColor+Extensions.swift in Sources */,
 				2A194A2D1EAF632500EB9642 /* NetworkScannerViewController.swift in Sources */,

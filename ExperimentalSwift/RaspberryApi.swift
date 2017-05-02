@@ -25,6 +25,7 @@ class RaspberryApi {
         case ledIntensity = "led/intensity"
         case oneDigitDisplay = "digitSegment/%d"
         case oneDigitDisplayOff = "digitSegment/switchOff"
+        case toggleRGBLed = "rgbLed/%@/toggle"
     }
     
     // MARK: Shared instance
@@ -113,5 +114,12 @@ class RaspberryApi {
         
         return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
                 .map({_ in return})
+    }
+    
+    func toggleRGBLedColor(_ color: RGBColor) -> Observable<Void> {
+        let url = getUrl(forEndpoint: .toggleRGBLed, parameters: color.rawValue)
+        
+        return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .map({_ in return})
     }
 }
