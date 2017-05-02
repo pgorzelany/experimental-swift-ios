@@ -23,7 +23,8 @@ class RaspberryApi {
         case startLedBlink = "led/start_blink"
         case stopLedBlink = "led/stop_blink"
         case ledIntensity = "led/intensity"
-        case oneDigitDisplay = "displayDigit/%d"
+        case oneDigitDisplay = "digitSegment/%d"
+        case oneDigitDisplayOff = "digitSegment/switchOff"
     }
     
     // MARK: Shared instance
@@ -105,5 +106,12 @@ class RaspberryApi {
         
         return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .map({_ in return})
+    }
+    
+    func displaySegmentSwitchOff() -> Observable<Void> {
+        let url = getUrl(forEndpoint: .oneDigitDisplayOff)
+        
+        return performRequest(.patch, url: url, parameters: nil, encoding: URLEncoding.default, headers: nil)
+                .map({_ in return})
     }
 }

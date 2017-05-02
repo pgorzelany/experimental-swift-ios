@@ -48,6 +48,17 @@ class OneDigitSegmentDisplayViewController: UIViewController {
         }
     }
     
+    @IBAction func switchOffButtonTouched(_ sender: BasicButton) {
+        rasberryApi.displaySegmentSwitchOff()
+            .handleActivity(with: self)
+            .handleError(with: self, defaultMessage: "Something went wrong while switching led")
+            .subscribe()
+            .addDisposableTo(disposeBag)
+    }
+    
+    @IBAction func tapGestureRecognized(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     // MARK: Support
     
     // MARK: Data
